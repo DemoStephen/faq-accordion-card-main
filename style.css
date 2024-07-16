@@ -39,17 +39,38 @@ main{
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 0 2rem 0 0;
     border-radius: 2rem;
+    overflow: hidden;
 }
 main section{
     width: 50%;
     position: relative;
 }
-.desktopView img{
-    width: fit-content;
+.text{
+    padding: 1rem 0;
 }
+.desktopView{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    transform: translate(-5rem, 4.5rem);
 
+}
+.desktopView div:nth-child(1){
+    grid-area: 1/1/6/6;
+    z-index: 1;
+}
+.desktopView div:nth-child(2){
+    grid-area: 3/1/4/3;
+    z-index: 2;
+    overflow: visible;
+}
+.desktopView div:nth-child(3){
+    grid-area: 1/1/6/6;
+}
+img{
+    width: 100%;
+}
 details+details{
     margin: 1rem 0 0 0;
 }
